@@ -1,1 +1,1 @@
-salut à tous les amis pour ceux qui me connaissent pas bah vous aviez qu'à me connaitre
+je suis un rageux
