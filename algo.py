@@ -27,7 +27,7 @@ def indextab(tableau,variable):
    indexvariable=""
    for i in range (len(tableau)):
       if tableau[i]==variable:
-         indexvariable.append(i)
+         indexvariabel + str(i) + ", "
    return indexvariable
 tableau1=[0,1,1,0,0,1,1,0,0,1]
 print(indextab(tableau1,0))
@@ -39,3 +39,18 @@ def login (userName,password,listUser):
          return "connexion réussi"
    else :
       return "utilisateur ou mot de passe incorrect"
+
+
+def indextab2(tab,var):
+   i=0
+   chaineResultat=""
+   firstTurn=True
+   while i< len(tab):
+      if tab[i]==var:
+         if firstTurn==True:
+            chaineResultat += str(i)
+            firstTurn=False
+         else:
+            chaineResultat= concat(chaineResultat, str(i))
+      i+=1
+   return chaineResultat   
