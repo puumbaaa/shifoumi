@@ -17,3 +17,25 @@ def inputt():
    return
 inputt()
 
+tableau=[0,1,2,3,4,5,6,7,8,9,15,17,18,19,2,84,581,8892,84]
+
+def concat(str1,str2):
+   #retourne les chaines de caractères concaténées avec une virgule au milieu
+   return(str1+", "+str2)
+
+def indextab(tableau,variable):
+   indexvariable=""
+   for i in range (len(tableau)):
+      if tableau[i]==variable:
+         indexvariable.append(i)
+   return indexvariable
+tableau1=[0,1,1,0,0,1,1,0,0,1]
+print(indextab(tableau1,0))
+
+listeutilisateur={"Gabriel":"1234","Gwendal":"5678","Rayouyouchan":"UwU"}
+def login (userName,password,listUser):
+   if userName in listUser:
+      if listUser[userName]==password:
+         return "connexion réussi"
+   else :
+      return "utilisateur ou mot de passe incorrect"
