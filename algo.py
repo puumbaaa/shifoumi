@@ -47,8 +47,8 @@ def indextab2(tab,var):
    firstTurn=True
    while i< len(tab):
       if tab[i]==var:
-         if firstTurn==True:
-            chaineResultat += str(i)
+         if firstTurn:
+            chaineResultat= str(i)
             firstTurn=False
          else:
             chaineResultat= concat(chaineResultat, str(i))
