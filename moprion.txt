@@ -1,0 +1,61 @@
+Début
+
+#os
+
+on définie une liste tabmorpion qui sert au fonctionnement du morpion
+
+on définie une liste tabresultat qui sert à l'affichage du morpion
+
+on définie une fonction cls qui ne prend rien en argument et qui permet de vider la console
+
+on définie une fonction displaytab qui prend comme argument une liste nommé tab
+    on appelle la fonction cls
+    pour tout x de la longueur de tab
+        pour tout y de la longueur de tab
+            si la valeur d'indice x y de tab est égal à 2
+                alors la valeur d'indice x y de tabresultat est égal à ' '
+            sinonsi la valeur d'indice x y de tab est égal à 1
+                alors la valeur d'indice x y de tabresultat est égal à '⬤'
+            sinonsi la valeur d'indice x y de tab est égal à 0
+                alors la valeur d'indice x y de tabresultat est égal à '✚'
+    pour tout i dans tabresultat    
+        afficher i 
+on définie une fonction morpion qui ne prend pas d'argument qui permet de jouer au morpion
+    on appelle la fonction displaytab avec tabmorpion en argument
+    on définie la variable joueur qui est un booléan égal à True
+    tant que c'est vrai
+        si le joueur 1 fait un alignement horizontal
+            afficher "joueur 1 a gagné"
+            fin fonction
+        sinonsi le joueur 1 fait un alignement vertical
+            afficher "joueur 1 a gagné"
+            fin fonction
+        sinonsi le joueur 1 fait un alignement diagonal
+            afficher "joueur 1 a gagné"
+            fin fonction
+        sinonsi le joueur 2 fait un alignement horizontal
+            afficher "joueur 2 a gagné"
+            fin fonction
+        sinonsi le joueur 2 fait un alignement vertical
+            afficher "joueur 2 a gagné"
+            fin fonction
+        sinonsi le joueur 2 fait un alignement diagonal
+            afficher "joueur 2 a gagné"
+            fin fonction
+        sinon
+            on définie deux variable i et j qui demande au joueur la hauteur et la largeur de son coup
+            si joueur est égal à True
+                si la valeur d'indice i et j de tabmorpion est égal à 2
+                    alors la valeur d'indice i j de tabmorpion est égal à 1
+                    alors joueur est égal à False
+                sinon 
+                    afficher "case déjà utilisé"
+                    afficher "rejouer"
+            sinon
+                si la valeur d'indice i et j de tabmorpion est égal à 2
+                    alors la valeur d'indice i j de tabmorpion est égal à 0
+                    alors joueur est égal à True
+                sinon 
+                    afficher "case déjà utilisé"
+                    afficher "rejouer"
+        on appelle la fonction displaytab avec tabmorpion comme argument

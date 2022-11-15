@@ -7,9 +7,9 @@ DEBUT
     #on définie pfc_ordi qui est égal à random()
     #si pfc_ordi et pfc_joueur sont égal à 0
         #alors afficher "égalité"
-    #si pfc_ordi est égal à 0 et que pfc_joueur est égal à 2 ou que pfc_ordi est égal à 1 et que pfc_joueur est égal à 0 ou que pfc_ordi est égal à 2 et que pfc_joueur est égal à 1
+    #sinon pfc_ordi est égal à 0 et que pfc_joueur est égal à 2 ou que pfc_ordi est égal à 1 et que pfc_joueur est égal à 0 ou que pfc_ordi est égal à 2 et que pfc_joueur est égal à 1
         #alors afficher "vous avez perdu"
-    #si pfc_joueur est égal à 0 et que pfc_ordi est égal à 2 ou que pfc_joueur est égal à 1 et que pfc_ordi est égal à 0 ou que pfc_joueur est égal à 2 et que pfc_ordi est égal à 1
+    #sinon pfc_joueur est égal à 0 et que pfc_ordi est égal à 2 ou que pfc_joueur est égal à 1 et que pfc_ordi est égal à 0 ou que pfc_joueur est égal à 2 et que pfc_ordi est égal à 1
         #alors afficher "vous avez gagnez"
     
 
