@@ -42,6 +42,7 @@ on définie une fonction morpion qui ne prend pas d'argument qui permet de jouer
         sinonsi le joueur 2 fait un alignement diagonal
             afficher "joueur 2 a gagné"
             fin fonction
+        sinonsi il y a égalité
         sinon
             on définie deux variable i et j qui demande au joueur la hauteur et la largeur de son coup
             si joueur est égal à True
