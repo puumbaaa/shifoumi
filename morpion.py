@@ -31,7 +31,7 @@ def displaytab(tab):
                 tabresultat[x][y] = '✚'
     for i in tabresultat:
         print(i)
-def morpion():
+def morpion2player():
     displaytab(tabmorpion)
     joueur = True
     while True:
@@ -72,3 +72,39 @@ def morpion():
                     print("case déja utilisé")
                     print('rejouer')
             displaytab(tabmorpion)
+
+
+def ordi_morpion(coupJoueurX,coupJoueurY):
+    tabmorpion[2][1]=1
+    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+    tabmorpion[coupJoueurX][coupJoueurY]==0
+    if tabmorpion[1][3]==0 or tabmorpion[3][1]==0:
+        tabmorpion[1][1]=1
+        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+        tabmorpion[coupJoueurX][coupJoueurY]==0 
+        if tabmorpion[3][1]==0:
+            tabmorpion[2][2]=1
+            coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+            tabmorpion[coupJoueurX][coupJoueurY]==0
+            if tabmorpion[3][3]==0:
+                tabmorpion[2][3]=1
+                print("perdu !")
+            else:
+                tabmorpion[3][3]=1
+                print("perdu !")
+        else:
+            tabmorpion[3][1]=1
+            print("perdu !")
+    else:
+        tabmorpion[2][2]=1
+        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+        tabmorpion[coupJoueurX][coupJoueurY]==0 
+        
+        
+
+
+
+
+        
+
+
