@@ -95,10 +95,23 @@ def ordi_morpion(coupJoueurX,coupJoueurY):
         else:
             tabmorpion[3][1]=1
             print("perdu !")
+    elif tabmorpion[2][2]:
+        
     else:
         tabmorpion[2][2]=1
         coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
-        tabmorpion[coupJoueurX][coupJoueurY]==0 
+        tabmorpion[coupJoueurX][coupJoueurY]==0
+        if tabmorpion[1][1]==0:
+            tabmorpion[3][1]=1
+        else:
+            tabmorpion[1][1]=1
+            if tabmorpion[3][3]==0:
+                tabmorpion[2][3]=1
+                print("perdu !")
+            else:
+                tabmorpion[3][3]=1
+                print("perdu !")
+            
         
         
 
