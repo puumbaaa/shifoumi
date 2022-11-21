@@ -1008,7 +1008,7 @@ def ordi_morpion():
                         displaytab(tabmorpion)
                         print("égalité !")
                         return
-        if tabmorpion[3][3]==0:
+        elif tabmorpion[3][3]==0:
             tabmorpion[2][2]=1
             displaytab(tabmorpion)
             coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
@@ -1245,4 +1245,662 @@ def ordi_morpion():
                         tabmorpion[coupJoueurX][coupJoueurY]=0
                         displaytab(tabmorpion)
                         print("égalité !")
+                        return
+        elif tabmorpion[2][1]==0:
+            tabmorpion[2][2]=1
+            displaytab(tabmorpion)
+            coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+            tabmorpion[coupJoueurX][coupJoueurY]=0
+            displaytab(tabmorpion)
+            if tabmorpion[1][1]==0:
+                tabmorpion[3][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[1][3]==2:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][2]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][2]==2:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][1]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[3][2]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][2]==2:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[1][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[1][3]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[2][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][3]==0:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+                    else:
+                        tabmorpion[3][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][3]==0:
+                tabmorpion[3][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[1][3]==2:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[2][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][1]==0:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+                    else:
+                        tabmorpion[1][1]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[1][2]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][1]==0:
+                        tabmorpion[3][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][2]==0:
+                tabmorpion[3][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[1][3]==2:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][1]==0:
+                        tabmorpion[1][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[2][3]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][1]==0:
+                        tabmorpion[3][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+            #kkgbvuzeyvbuzeyviozraaaaayyofg
+        elif tabmorpion[1][2]==0:
+            tabmorpion[2][2]=1
+            displaytab(tabmorpion)
+            coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+            tabmorpion[coupJoueurX][coupJoueurY]=0
+            displaytab(tabmorpion)
+            if tabmorpion[1][1]==0:
+                tabmorpion[1][3]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][1]==2:
+                    tabmorpion[3][1]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[2][1]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[2][3]==2:
+                        tabmorpion[2][3]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[1][3]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[2][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[2][1]==2:
+                        tabmorpion[2][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][1]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][1]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[3][2]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][3]==0:
+                        tabmorpion[2][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+                    else:
+                        tabmorpion[1][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][3]==0:
+                tabmorpion[1][3]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][1]==2:
+                    tabmorpion[3][1]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[3][2]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][1]==0:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+                    else:
+                        tabmorpion[1][1]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[1][2]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][1]==0:
+                        tabmorpion[3][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[2][3]==0:
+                tabmorpion[1][3]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][1]==2:
+                    tabmorpion[3][1]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][1]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][3]==0:
+                        tabmorpion[3][3]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][2]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[3][1]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][3]==0:
+                        tabmorpion[1][3]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+        elif tabmorpion[2][1]==0:
+            tabmorpion[2][2]=1
+            displaytab(tabmorpion)
+            coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+            tabmorpion[coupJoueurX][coupJoueurY]=0
+            displaytab(tabmorpion)
+            if tabmorpion[1][1]==0:
+                tabmorpion[3][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[1][3]==2:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][2]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][2]==2:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][1]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[3][2]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][2]==2:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[1][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[1][3]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[2][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][3]==0:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+                    else:
+                        tabmorpion[3][3]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][3]==0:
+                tabmorpion[3][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[1][3]==2:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[2][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][1]==0:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+                    else:
+                        tabmorpion[1][1]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[1][2]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][1]==0:
+                        tabmorpion[3][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[3][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[3][2]==0:
+                tabmorpion[3][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[1][3]==2:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[1][1]==0:
+                        tabmorpion[1][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                        tabmorpion[coupJoueurX][coupJoueurY]=0
+                        displaytab(tabmorpion)
+                        print("égalité !")
+                        return
+            elif tabmorpion[2][3]==0:
+                tabmorpion[1][1]=1
+                displaytab(tabmorpion)
+                coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                tabmorpion[coupJoueurX][coupJoueurY]=0
+                displaytab(tabmorpion)
+                if tabmorpion[3][3]==2:
+                    tabmorpion[3][3]=1
+                    displaytab(tabmorpion)
+                    print("perdu !")
+                    return
+                else:
+                    tabmorpion[1][3]=1
+                    displaytab(tabmorpion)
+                    coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+                    tabmorpion[coupJoueurX][coupJoueurY]=0
+                    displaytab(tabmorpion)
+                    if tabmorpion[3][1]==0:
+                        tabmorpion[3][1]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
+                        return
+                    else:
+                        tabmorpion[1][2]=1
+                        displaytab(tabmorpion)
+                        print("perdu !")
                         return
