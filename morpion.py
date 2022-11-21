@@ -478,7 +478,7 @@ def ordi_morpion():
                     coupJoueurX,coupJoueurY=int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
                     tabmorpion[coupJoueurX][coupJoueurY]=0
                     displaytab(tabmorpion)
-                    if tabmorpion[3][1]==0:
+                    if tabmorpion[3][1]==2:
                         tabmorpion[3][1]=1
                         displaytab(tabmorpion)
                         print("perdu !")
