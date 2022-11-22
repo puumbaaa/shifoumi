@@ -1,0 +1,149 @@
+DEBUT
+
+#on admet une fonction input qui récupère l'entrée d'un joueur lors de son éxecution#
+
+# on defini 'afficherTable' qui permet d'afficher le morpion dans un dictionnaire grace au parametre tabmorpion
+    # on afficher la premiere ligne du morpion séparé par des traits pour formé un dictionnaire
+    # on afficher des plus et des moins pour faire un ligne de séparation
+    # on afficher la deuxieme ligne du morpion séparé par des traits pour formé un dictionnaire
+    # on afficher des plus et des moins pour faire un ligne de séparation
+    # on afficher la troisieme ligne du morpion séparé par des traits pour formé un dictionnaire
+
+# on defini 'espaceVide' qui prend en parametre une position de case et permet de verifé si elle est espaceVide
+    # si la position dans le dictionnaire 'tabmorpion' est espaceVide
+        # alors renvoyer vrai
+    # sinon renvoyer faux
+
+#  on defini 'insertLetter' qui prend en parametre signe et position et qui permet d'inserer le signe dans la case correspondant a position
+    # si la case est vide 
+        # alors mettre le signe dans cette case et afficher le dictionnaire
+        # si la fonction verificationEgalite renvoi faux
+            # alors afficher egalité et arrete le programme
+        # si la fonction verificationEgalite renvoi vrai 
+            # et si le signe est une croix 
+                # alors afficher perdu et arrete le programme
+            # sinon 
+                # afficher gagné et arrete le programme
+        # retourner rien
+    # sinon 
+        # afficher que la case est deja prise
+        # redemander de selectionner une case
+        # rapeller la fonction
+        # retourner rien 
+
+# on defini 'verificationVictoire' qui permet de savoir si le joueur ou le bot a gagné
+    # si il y a une victoire sur la premiere ligne sois que la valeur de tabmorpion pour l'index 1,2 et 3 sois egal et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la deuxieme ligne sois que la valeur de tabmorpion pour l'index 4,5 et 6 sois egal et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la deuxieme ligne sois que la valeur de tabmorpion pour l'index 7,8 et 9 sois egal et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la premiere colone sois que la valeur de tabmorpion pour l'index 1,4 et 7 sois egal et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la deuxieme colone sois que la valeur de tabmorpion pour l'index 2,5 et 8 sois egal et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la troisieme colone sois que la valeur de tabmorpion pour l'index 3,6 et 9 sois egal et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur l'une des diagonal sois que la valeur de tabmorpion pour l'index 1,5 et 9 sois egal et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur l'autre diagonal sois que la valeur de tabmorpion pour l'index 3,5 et 7 sois egal et non vide
+        # alors retourner vrai
+    # sinon
+        # retourner faux
+
+# on defini 'verificationGagnant' qui permet de savoir si un signe rentré en parametre a gagné
+    # si il y a une victoire sur la premiere ligne sois que la valeur de tabmorpion pour l'index 1,2 et 3 sois egal a signe et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la deuxieme ligne sois que la valeur de tabmorpion pour l'index 4,5 et 6 sois egal a signe et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la deuxieme ligne sois que la valeur de tabmorpion pour l'index 7,8 et 9 sois egal a signe  et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la premiere colone sois que la valeur de tabmorpion pour l'index 1,4 et 7 sois egal a signe  et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la deuxieme colone sois que la valeur de tabmorpion pour l'index 2,5 et 8 sois egal a signe  et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur la troisieme colone sois que la valeur de tabmorpion pour l'index 3,6 et 9 sois egal a signe  et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur l'une des diagonal sois que la valeur de tabmorpion pour l'index 1,5 et 9 sois egal a signe  et non vide
+        # alors retourner vrai
+    # si il y a une victoire sur l'autre diagonal sois que la valeur de tabmorpion pour l'index 3,5 et 7 sois egal a signe  et non vide
+        # alors retourner vrai
+    # sinon
+        # retourner faux
+
+# on defini 'verificationEgalite' qui permet de verifier si il y a une egalité
+    # pour tout les index dans le dictionnaire tabmorpion
+        # si la valeur correspondant a l'index est vide
+            # retourner faux
+        # sinon retourner vrai
+
+# on defini 'choixJoueur' qui gere le choix du joueur
+    # on creer position qui grace a input prend pour valeur un entier choisi par le joueur
+    # on utilise la fonction 'insertLetter' avec pour parametre joueur et position
+    # renvoyer rien
+
+# on defini 'choixOrdi' qui gere le choix du bot
+    # on creer meilleurScore qui est egal a -800
+    # on creer meilleurCoup qui est egal a 0
+    # pour tout les index dans le dictionnaire tabmorpion
+        # si la valeur correspondant a l'index dans tabmorpion est vide 
+            # alors cette valeur est egal a ordi
+            # on creer score egal a 'minimax' avec parametre tabmorpion , 0 et faux
+            # la valeur egal a l'index dans tabmorpion est egal a rien
+            # si score est plus grand que meilleurScore
+                # alors meilleurScore est egal a score
+                # alors meilleurCoup est egal a l'index 
+    # on utilise la fonction insertLetter avec comme parametre ordi et meilleurCoup
+    # renvoyer rien
+
+# on defini 'minimax' qui prend en parametre tabmorpion , profondeur et isMaximizing
+    # si 'verificationGagnant' avec ordi comme parametre est egal a vrai
+        # alors renvoyer 1
+    # si 'verificationGagnant' avec joueur comme parametre est egal a vrai 
+        # alors renvoyer -1
+    # si 'verificationEgalite' est egal a vrai 
+        # alors renvoyer 0
+    # si isMaximizing est egal a vrai
+        # on creer bestScore egal a -800
+        # pour tout les index dans le dictionnaire tabmorpion
+            # si la valeur correspondant a l'index dans tabmorpion est vide 
+                # alors cette valeur est egal a ordi
+                # on creer score egal a 'minimax' avec parametre tabmorpion , profondeur plus 1 et faux
+                # la valeur egal a l'index dans tabmorpion est egal a rien
+                # si score est plus grand que bestScore
+                    # alors bestScore est egal a score
+        renvoyer bestScore
+    # sinon
+        # creer bestScore est egal a 800
+        # pour tout les index dans le dictionnaire tabmorpion
+            # si la valeur correspondant a l'index dans tabmorpion est vide 
+                # alors cette valeur est egal a joueur
+                # on creer score egal a 'minimax' avec parametre tabmorpion , profondeur plus 1 et vrai
+                # la valeur egal a l'index dans tabmorpion est egal a rien
+                # si score est plus petit que bestScore
+                    # alors bestScore est egal a score
+        renvoyer bestScore
+
+# on creer tabmorpion un dictionnaire dont les valeur et clé sont 1 : ' ' , 2 : ' ' , 3 : ' ' , 4 : ' ' , 5 : ' ' , 6 : ' ' , 7 : ' ' , 8 : ' ' , 9 : ' ' ,
+
+# utiliser afficherTable pour tabmorpion
+# afficher "ordi commence"
+# afficher "les positions :"
+# afficher "1, 2, 3"
+# afficher "4, 5, 6"
+# afficher "7, 8, 9"
+# afficher "\n"
+# creer joueur egal a "O"
+# creer ordi egal a "X"
+
+# on creer start egal a un input qui demande si le joueur veut commencer (il choisi 1 ou 0)
+# si start est egal a 0
+    # et tant que verificationVictoire est faux
+        # on utilise la fonction choixOrdi 
+        # on utilise la fonction choixJoueur
+# si start est egal a 1 
+    # et tant que verificationVictoire est faux
+        # on utilise la fonction choixJoueur
+        # on utilise la fonction choixOrdi
+
+
