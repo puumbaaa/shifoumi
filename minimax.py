@@ -10,8 +10,7 @@ def afficherTable(tabmorpion):
 def espaceVide(position):
     if tabmorpion[position] == ' ':
         return True
-    else:
-        return False
+    return False
 
 
 def insertLetter(signe, position):
