@@ -1,3 +1,10 @@
+tabmorpion = {1: ' ', 2: ' ', 3: ' ',
+              4: ' ', 5: ' ', 6: ' ',
+              7: ' ', 8: ' ', 9: ' '}
+
+joueur = 'O'
+ordi = 'X'
+
 def afficherTable(tabmorpion):
     print(tabmorpion[1] + '|' + tabmorpion[2] + '|' + tabmorpion[3])
     print('-+-+-')
@@ -139,28 +146,23 @@ def minimax(tabmorpion, profondeur, isMaximizing):
                     bestScore = score
         return bestScore
 
-
-tabmorpion = {1: ' ', 2: ' ', 3: ' ',
-              4: ' ', 5: ' ', 6: ' ',
-              7: ' ', 8: ' ', 9: ' '}
-
 afficherTable(tabmorpion)
-print("ordi commence")
 print("les positions :")
 print("1, 2, 3 ")
 print("4, 5, 6 ")
 print("7, 8, 9 ")
 print("\n")
-joueur = 'O'
-ordi = 'X'
 
 start=int(input("pour commencer taper 1, sinon taper 0"))
 if start ==0:
+    print("ordi commence")
     while not verificationVictoire():
         choixOrdi()
         choixJoueur()
 if start==1:
+    print("joueur commence")
     while not verificationVictoire():
         choixJoueur()
         choixOrdi()
+
         
