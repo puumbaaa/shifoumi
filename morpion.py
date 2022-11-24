@@ -234,31 +234,47 @@ def PierreFeuilleCiseau(pfc_joueur):
         print("gagné !")
         return
 
-
-
-game=int(input("pour jouer à 2 joueur taper 0, pour jouer contre l'ordi taper 1"))
-if game==0:
-    morpion2player()
-elif game==1:
-    afficherTable(tabmorpion)
-    print("les positions :")
-    print("1, 2, 3 ")
-    print("4, 5, 6 ")
-    print("7, 8, 9 ")
-    print("\n")
-    start=int(input("pour commencer taper 1, sinon taper 0"))
-    if start ==0:
-        print("ordi commence")
-        while not verificationVictoire():
-            cls()
-            choixOrdi()
-            choixJoueur()
-    if start==1:
-        print("joueur commence")
-        while not verificationVictoire():
-            cls()
-            choixJoueur()
-            choixOrdi()
-elif game==2:
-        jouer=int(input("pierre = 0 | feuille = 1 | ciseau = 2"))
-        PierreFeuilleCiseau(jouer)
+jeux=True
+while jeux:
+    game=int(input("pour jouer à 2 joueur taper 1, pour jouer contre l'ordi taper 2, pour arreter de jouer taper 0"))
+    if game==1:
+        continuer=True
+        while continuer:
+            morpion2player()
+            question=int(input("pour continuer taper 1 sinon taper 0")
+            if question==0:
+                continuer=False
+    elif game==2:
+        continuer=True
+        while continuer:
+            afficherTable(tabmorpion)
+            print("les positions :")
+            print("1, 2, 3 ")
+            print("4, 5, 6 ")
+            print("7, 8, 9 ")
+            print("\n")
+            start=int(input("pour commencer taper 1, sinon taper 0"))
+            if start ==0:
+                print("ordi commence")
+                while not verificationVictoire():
+                    cls()
+                    choixOrdi()
+                    choixJoueur()
+            if start==1:
+                print("joueur commence")
+                while not verificationVictoire():
+                    cls()
+                    choixJoueur()
+                    choixOrdi()
+            question=int(input("pour continuer taper 1 sinon taper 0")
+            if question==0:
+                continuer=False
+    elif game==3:
+            continuer=True
+            while continuer:
+                jouer=int(input("pierre = 0 | feuille = 1 | ciseau = 2"))
+                PierreFeuilleCiseau(jouer)
+                question=int(input("pour continuer taper 1 sinon taper 0")
+                if question==0:
+                    continuer=False
+    
