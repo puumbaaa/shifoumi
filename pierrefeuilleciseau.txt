@@ -1,18 +1,84 @@
 DEBUT
-#on admet une fonction random qui envoie un chiffre aléatoire entre 0 et 2
-#on admet une fonction input qui récupère l'entrée d'un joueur lors de son éxecution#
 
-#on définie une fonction PierreFeuilleCiseau(pfc_joueur) qui permet de lancer le jeu pierre feuille ciseau, pfc_joueur étant un integer entre 0 et 2 
-    #on définie une liste pfc qui a comme valeur les mots pierre feuille et ciseau ["pierre","feuille","ciseau"]
-    #on définie pfc_ordi qui est égal à random()
-    #si pfc_ordi et pfc_joueur sont égal à 0
-        #alors afficher "égalité"
-    #sinon pfc_ordi est égal à 0 et que pfc_joueur est égal à 2 ou que pfc_ordi est égal à 1 et que pfc_joueur est égal à 0 ou que pfc_ordi est égal à 2 et que pfc_joueur est égal à 1
-        #alors afficher "vous avez perdu"
-    #sinon pfc_joueur est égal à 0 et que pfc_ordi est égal à 2 ou que pfc_joueur est égal à 1 et que pfc_ordi est égal à 0 ou que pfc_joueur est égal à 2 et que pfc_ordi est égal à 1
-        #alors afficher "vous avez gagnez"
+# on admet une fonction 'random' qui choisit au hasard une valeur comprise entre 0 et 2 lors de son exécution
+# on admet 'input' une fonction qui récupère l'entrée d'un joueur lors de son exécution
+# on admet 'attendre' une fonction qui permet d'ajoute du temps entre les exécutions
+
+# on affiche le didacticiel du jeu expliquant les règles mais aussi expliquant les fonctions et comment s'en servir
+
+# créer un dico 'langueliste'
+    # ajouter une liste pour le jeu pierre-feuille-ciseau en français / ['pierre','feuille','ciseaux'] a 'langueliste'
+    # ajouter une liste pour le jeu pierre-feuille-ciseau en chinois / ['chi','fou','mi'] a 'langueliste'
+    # ajouter une liste pour le jeu pierre-feuille-ciseau en anglais / ['rock','paper','scisors'] a 'langueliste'
+    # ajouter une liste pour le jeu pierre-feuille-ciseau en japonais / ['jan','ken','pon'] a 'langueliste'
+
+# on défini 'fin' une fonction qui prend en paramètre langue et qui permet de faire une fin plus esthétique au match
+    # créer 'liste' une liste qui prend les valeurs de dico en fonction de la clé langue
+    # on affiche la valeur de 'liste' correspondant a l'index 0
+    # attend 3 sec
+    # on affiche la valeur de 'liste' correspondant a l'index 1
+    # attend 3 sec
+    # on affiche la valeur de 'liste' correspondant a l'index 2
+
+# on défini 'match' une fonction qui exécute le jeu pierre feuille ciseau et prend en paramètre une langue et genre (' jcj' ou 'jcb' )
+    # créer 'liste' une liste qui prend les valeurs de 'langueliste' en fonction de la clé langue
     
+    # si genre est égal a 'jcb'
+        # alors créer une variable 'choixbot' qui assigne une valeur de 'liste' grâce à un index donner par un entier entre 0 et 2 venant du retour de 'random'
+        # alors créer une variable 'choixjoueur' qui assigne une valeur de 'liste' grâce à un index donner par un entier entre 0 et 2 venant du retour de 'input' en affichant les valeurs de 'liste' et leur index
+        
+        # on compare le 'choixbot' au 'choixjoueur' et s'il y a égalité donc que 'choixbot' est égal a 'choixjoueur'
+            # alors utiliser la fonction 'fin', afficher 'égalité' et le choix de chacun
+        # si le joueur gagne donc si le joueur a pierre contre ciseaux ou feuille contre pierre ou ciseaux contre feuille
+            # alors utiliser la fonction 'fin', afficher "vous avez gagner", le choix de chacun et retourner 1
+        # sinon (si le bot gagne)
+            # alors utiliser la fonction 'fin', afficher "vous avez perdu", le choix de chacun et retourner 0
 
+    # si genre est égal a 'jcj'
+        # alors créer une variable 'choixjoueur1' qui assigne une valeur de liste grâce à un index donner par un entier entre 0 et 2 venant du retour de 'input' en affichant les valeurs de 'liste' et leur index
+        # alors créer une variable 'choixjoueur2' qui assigne une valeur de liste grâce à un index donner par un entier entre 0 et 2 venant du retour de 'input' en affichant les valeurs de 'liste' et leur index
 
+        # on compare le 'choixjoueur1' au 'choixjoueur2' et s'il y a égalité donc que 'choixjoueur1' est égal a 'choixjoueur2'
+            # alors utiliser la fonction 'fin', afficher 'égalité' et le choix de chacun
+        # si le joueur1 gagne donc si le joueur1 a pierre contre ciseaux ou feuille contre pierre ou ciseaux contre feuille
+            # alors utiliser la fonction 'fin', afficher "joueur1 a gagné", le choix de chacun et retourner 1
+        # sinon (si le joueur2 gagne)
+            # alors utiliser la fonction 'fin', afficher "joueur2 a gagné", le choix de chacun et retourner 0
 
+# on défini 'tournoi' une fonction qui prend en paramètre nbmatch le nombre de match souhaité, langue et genre ( 'jcj' ou 'jcb' )
+    
+    # si genre est égal a 'jcb'
+        # on crée 'pointjoueur' une variable égale a 0
+        # on crée 'pointbot' une variable égale a 0
+        
+        # tant que nbmatch est supérieur à 0
+            # on joue un match en utilisant la fonction dont le retour est nommé 'retourmatch'
+            # si 'retourmatch' est égal à 1
+                # alors on ajoute 1 a 'pointjoueur'
+            # si 'retourmatch' est égal à 0
+                # alors on ajoute 1 a 'pointbot'
+            # retire 1 a nbmatch
+        
+        # si 'pointjoueur' est supérieur a 'pointbot'
+            # alors afficher "vous avez gagne avec /pointjoueur/ points contre /pointbot/"
+        # si 'pointbot' est supérieur a 'pointjoueur'
+            # alors retourner "vous avez perdu avec /pointjoueur/ points contre /pointbot/"
+
+    # si genre est égal a 'jcj'
+        # on crée 'pointjoueur1' une variable égale a 0
+        # on crée 'pointjoueur2' une variable égale a 0
+
+        # tant que nbmatch est supérieur à 0
+            # on joue un match en utilisant la fonction dont le retour est nommé 'retourmatch'
+            # si 'retourmatch' est égal a 1
+                # alors on ajoute 1 a 'pointjoueur1'
+            # si 'retourmatch' est égal a 0
+                # alors on ajoute 1 a 'pointjoueur2'
+            # retire 1 a nbmatch
+
+        # si 'pointjoueur1' est supérieur a 'pointjoueur2'
+            # alors retourner 'joueur1 a gagne avec /pointjoueur1/ points contre /pointjoueur2/'
+        # si 'pointjoueur2' est supérieur a 'pointjoueur1'
+            # alors retourner 'joueur2 a gagne avec /pointjoueur2/ points contre /pointjoueur1/'
+            
 FIN
