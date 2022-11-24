@@ -1,6 +1,7 @@
 # DEBUT
 
 import os
+import random
 
 tabmorpion = [
     ['□',"1","2","3"],
@@ -220,24 +221,44 @@ def minimax(tabmorpion, profondeur, isMaximizing):
                     bestScore = score
         return bestScore
 
+def PierreFeuilleCiseau(pfc_joueur):
+    pfc=["pierre","feuille","ciseau"]
+    pfc_ordi=random.randint(0,2)
+    if pfc_ordi==pfc_joueur:
+        print("égalité !")
+        return
+    elif (pfc_ordi==0 and pfc_joueur==2) or (pfc_ordi==1 and pfc_joueur==0) or (pfc_ordi==2 and pfc_joueur==1):
+        print("perdu !")
+        return
+    elif (pfc_ordi==2 and pfc_joueur==0) or (pfc_ordi==0 and pfc_joueur==1) or (pfc_ordi==1 and pfc_joueur==2):
+        print("gagné !")
+        return
 
 
-afficherTable(tabmorpion)
-print("ordi commence")
-print("les positions :")
-print("1, 2, 3 ")
-print("4, 5, 6 ")
-print("7, 8, 9 ")
-print("\n")
 
-
-start=int(input("pour commencer taper 1, sinon taper 0"))
-if start ==0:
-    while not verificationVictoire():
-        choixOrdi()
-        choixJoueur()
-if start==1:
-    while not verificationVictoire():
-        choixJoueur()
-        choixOrdi()
-        
+game=int(input("pour jouer à 2 joueur taper 0, pour jouer contre l'ordi taper 1"))
+if game==0:
+    morpion2player()
+elif game==1:
+    afficherTable(tabmorpion)
+    print("les positions :")
+    print("1, 2, 3 ")
+    print("4, 5, 6 ")
+    print("7, 8, 9 ")
+    print("\n")
+    start=int(input("pour commencer taper 1, sinon taper 0"))
+    if start ==0:
+        print("ordi commence")
+        while not verificationVictoire():
+            cls()
+            choixOrdi()
+            choixJoueur()
+    if start==1:
+        print("joueur commence")
+        while not verificationVictoire():
+            cls()
+            choixJoueur()
+            choixOrdi()
+elif game==2:
+        jouer=int(input("pierre = 0 | feuille = 1 | ciseau = 2"))
+        PierreFeuilleCiseau(jouer)
