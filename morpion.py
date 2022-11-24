@@ -73,7 +73,11 @@ def morpion2player():
                     print('rejouer')
             displaytab(tabmorpion)
 
-
+tabmorpion = {1: ' ', 2: ' ', 3: ' ',
+              4: ' ', 5: ' ', 6: ' ',
+              7: ' ', 8: ' ', 9: ' '}
+joueur = 'O'
+ordi = 'X'
 def afficherTable(tabmorpion):
     print(tabmorpion[1] + '|' + tabmorpion[2] + '|' + tabmorpion[3])
     print('-+-+-')
@@ -217,9 +221,6 @@ def minimax(tabmorpion, profondeur, isMaximizing):
         return bestScore
 
 
-tabmorpion = {1: ' ', 2: ' ', 3: ' ',
-              4: ' ', 5: ' ', 6: ' ',
-              7: ' ', 8: ' ', 9: ' '}
 
 afficherTable(tabmorpion)
 print("ordi commence")
@@ -228,8 +229,7 @@ print("1, 2, 3 ")
 print("4, 5, 6 ")
 print("7, 8, 9 ")
 print("\n")
-joueur = 'O'
-ordi = 'X'
+
 
 start=int(input("pour commencer taper 1, sinon taper 0"))
 if start ==0:
