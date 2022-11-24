@@ -266,7 +266,7 @@ while jeux:
                     cls()
                     choixJoueur()
                     choixOrdi()
-            question=int(input("pour continuer taper 1 sinon taper 0")
+            question=int(input("pour continuer taper 1 sinon taper 0"))
             if question==0:
                 continuer=False
     elif game==3:
@@ -274,7 +274,7 @@ while jeux:
             while continuer:
                 jouer=int(input("pierre = 0 | feuille = 1 | ciseau = 2"))
                 PierreFeuilleCiseau(jouer)
-                question=int(input("pour continuer taper 1 sinon taper 0")
+                question=int(input("pour continuer taper 1 sinon taper 0"))
                 if question==0:
                     continuer=False
     questionjeux=int(input("pour revenir au menu pricipal taper 1, sinon taper 0"))
