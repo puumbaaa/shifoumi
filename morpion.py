@@ -241,7 +241,7 @@ while jeux:
         continuer=True
         while continuer:
             morpion2player()
-            question=int(input("pour continuer taper 1 sinon taper 0")
+            question=int(input("pour continuer taper 1 sinon taper 0"))
             if question==0:
                 continuer=False
     elif game==2:
@@ -277,4 +277,6 @@ while jeux:
                 question=int(input("pour continuer taper 1 sinon taper 0")
                 if question==0:
                     continuer=False
-    
+    questionjeux=int(input("pour revenir au menu pricipal taper 1, sinon taper 0"))
+    if questionjeux==0:
+        jeux=False
