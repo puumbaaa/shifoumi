@@ -233,17 +233,24 @@ def PierreFeuilleCiseau(pfc_joueur):
     elif (pfc_ordi==2 and pfc_joueur==0) or (pfc_ordi==0 and pfc_joueur==1) or (pfc_ordi==1 and pfc_joueur==2):
         print("gagné !")
         return
-
+#on définie un variable jeux à True 
 jeux=True
 while jeux:
     game=int(input("pour jouer à 2 joueur taper 1, pour jouer contre l'ordi taper 2, pour arreter de jouer taper 0"))
-    if game==1:
+    if game==0:
+        jeux=False
+
+    #tant que game est égal à 1
+    elif game==1:
         continuer=True
         while continuer:
             morpion2player()
             question=int(input("pour continuer taper 1 sinon taper 0"))
             if question==0:
                 continuer=False
+        questionjeux=int(input("pour revenir au menu pricipal taper 1, sinon taper 0"))
+        if questionjeux==0:
+            jeux=False
     elif game==2:
         continuer=True
         while continuer:
@@ -269,6 +276,9 @@ while jeux:
             question=int(input("pour continuer taper 1 sinon taper 0"))
             if question==0:
                 continuer=False
+        questionjeux=int(input("pour revenir au menu pricipal taper 1, sinon taper 0"))
+        if questionjeux==0:
+            jeux=False
     elif game==3:
             continuer=True
             while continuer:
@@ -277,6 +287,7 @@ while jeux:
                 question=int(input("pour continuer taper 1 sinon taper 0"))
                 if question==0:
                     continuer=False
-    questionjeux=int(input("pour revenir au menu pricipal taper 1, sinon taper 0"))
-    if questionjeux==0:
-        jeux=False
+            questionjeux=int(input("pour revenir au menu pricipal taper 1, sinon taper 0"))
+            if questionjeux==0:
+                jeux=False
+    
