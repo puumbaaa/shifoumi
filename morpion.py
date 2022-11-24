@@ -1,15 +1,15 @@
 # DEBUT
-
+#importation du module os et random
 import os
 import random
-
-tabmorpion = [
+#liste du tableau utiliser pour le calcul du morpion
+tabmorpion1 = [
     ['□',"1","2","3"],
     ['1',2,2,2],
     ['2',2,2,2],
     ['3',2,2,2]
 ]
-
+#liste du tableau d'affichage du morpion
 tabresultat = [
     ['□',"1","2","3"],
     ['1',' ',' ',' '],
@@ -19,7 +19,7 @@ tabresultat = [
 
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
-
+#fonction qui permet d'afficher la table du morpion
 def displaytab(tab):
     cls()
     for x in range(len(tab)):
@@ -32,47 +32,56 @@ def displaytab(tab):
                 tabresultat[x][y] = '✚'
     for i in tabresultat:
         print(i)
+#fonction qui permet de jouerau morpion à 2 joueurs
 def morpion2player():
-    displaytab(tabmorpion)
+    displaytab(tabmorpion1)
     joueur = True
     while True:
         # victoire joueur1
-        if (tabmorpion[1][1], tabmorpion[1][2], tabmorpion[1][3]) == (1,1,1) or (tabmorpion[2][1], tabmorpion[2][2], tabmorpion[2][3]) == (1,1,1) or (tabmorpion[3][1], tabmorpion[3][2], tabmorpion[3][3]) == (1,1,1):
+        # vérification ligne  
+        if (tabmorpion1[1][1], tabmorpion1[1][2], tabmorpion1[1][3]) == (1,1,1) or (tabmorpion1[2][1], tabmorpion1[2][2], tabmorpion1[2][3]) == (1,1,1) or (tabmorpion1[3][1], tabmorpion1[3][2], tabmorpion1[3][3]) == (1,1,1):
             print("joueur1 a gagné")
             return
-        elif (tabmorpion[1][1], tabmorpion[2][1], tabmorpion[3][1]) == (1,1,1) or (tabmorpion[1][2], tabmorpion[2][2], tabmorpion[3][2]) == (1,1,1) or (tabmorpion[1][3], tabmorpion[2][3], tabmorpion[3][3]) == (1,1,1):
+        # vérification colonne
+        elif (tabmorpion1[1][1], tabmorpion1[2][1], tabmorpion1[3][1]) == (1,1,1) or (tabmorpion1[1][2], tabmorpion1[2][2], tabmorpion1[3][2]) == (1,1,1) or (tabmorpion1[1][3], tabmorpion1[2][3], tabmorpion1[3][3]) == (1,1,1):
             print("joueur1 a gagné")
             return
-        elif (tabmorpion[1][3], tabmorpion[2][2], tabmorpion[3][1]) == (1,1,1) or (tabmorpion[1][1], tabmorpion[2][2], tabmorpion[3][3]) == (1,1,1):
+        # vérification diagonale
+        elif (tabmorpion1[1][3], tabmorpion1[2][2], tabmorpion1[3][1]) == (1,1,1) or (tabmorpion1[1][1], tabmorpion1[2][2], tabmorpion1[3][3]) == (1,1,1):
             print("joueur1 a gagné")
             return
         # victoire joueur2
-        elif (tabmorpion[1][1], tabmorpion[1][2], tabmorpion[1][3]) == (0,0,0) or (tabmorpion[2][1], tabmorpion[2][2], tabmorpion[2][3]) == (0,0,0) or (tabmorpion[3][1], tabmorpion[3][2], tabmorpion[3][3]) == (0,0,0):
+        # vérification ligne
+        elif (tabmorpion1[1][1], tabmorpion1[1][2], tabmorpion1[1][3]) == (0,0,0) or (tabmorpion1[2][1], tabmorpion1[2][2], tabmorpion1[2][3]) == (0,0,0) or (tabmorpion1[3][1], tabmorpion1[3][2], tabmorpion1[3][3]) == (0,0,0):
             print("joueur2 a gagné")
             return
-        elif (tabmorpion[1][1], tabmorpion[2][1], tabmorpion[3][1]) == (0,0,0) or (tabmorpion[1][2], tabmorpion[2][2], tabmorpion[3][2]) == (0,0,0) or (tabmorpion[1][3], tabmorpion[2][3], tabmorpion[3][3]) == (0,0,0):
+        # vérification colonne
+        elif (tabmorpion1[1][1], tabmorpion1[2][1], tabmorpion1[3][1]) == (0,0,0) or (tabmorpion1[1][2], tabmorpion1[2][2], tabmorpion1[3][2]) == (0,0,0) or (tabmorpion1[1][3], tabmorpion1[2][3], tabmorpion1[3][3]) == (0,0,0):
             print("joueur2 a gagné")
             return
-        elif (tabmorpion[1][3], tabmorpion[2][2], tabmorpion[3][1]) == (0,0,0) or (tabmorpion[1][1], tabmorpion[2][2], tabmorpion[3][3]) == (0,0,0):
+        # vérification diagonale
+        elif (tabmorpion1[1][3], tabmorpion1[2][2], tabmorpion1[3][1]) == (0,0,0) or (tabmorpion1[1][1], tabmorpion1[2][2], tabmorpion1[3][3]) == (0,0,0):
             print("joueur2 a gagné")
             return
+        # sinon continuer à jouer
         else:
             i, j = int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+            # vérification case déjà prise ou non
             if joueur == True:
-                if tabmorpion[i][j] == 2:
-                    tabmorpion[i][j] = 1
+                if tabmorpion1[i][j] == 2:
+                    tabmorpion1[i][j] = 1
                     joueur = not joueur
                 else : 
                     print("case déja utilisé")
                     print('rejouer')
             else:
-                if tabmorpion[i][j] == 2:
-                    tabmorpion[i][j] = 0
+                if tabmorpion1[i][j] == 2:
+                    tabmorpion1[i][j] = 0
                     joueur = not joueur
                 else : 
                     print("case déja utilisé")
                     print('rejouer')
-            displaytab(tabmorpion)
+            displaytab(tabmorpion1)
 
 tabmorpion = {1: ' ', 2: ' ', 3: ' ',
               4: ' ', 5: ' ', 6: ' ',
@@ -101,14 +110,14 @@ def insertLetter(signe, position):
         afficherTable(tabmorpion)
         if (verificationEgalite()):
             print("égalité !")
-            exit()
+            return
         if verificationVictoire():
             if signe == 'X':
                 print("perdu !!")
-                exit()
+                return
             else:
                 print("gagné !")
-                exit()
+                return
 
         return
 
@@ -264,18 +273,19 @@ while jeux:
             if start ==0:
                 print("ordi commence")
                 while not verificationVictoire():
-                    cls()
                     choixOrdi()
                     choixJoueur()
+                question=int(input("pour continuer taper 1 sinon taper 0"))
+                if question==0:
+                    continuer=False
             if start==1:
                 print("joueur commence")
                 while not verificationVictoire():
-                    cls()
                     choixJoueur()
                     choixOrdi()
-            question=int(input("pour continuer taper 1 sinon taper 0"))
-            if question==0:
-                continuer=False
+                question=int(input("pour continuer taper 1 sinon taper 0"))
+                if question==0:
+                    continuer=False
         questionjeux=int(input("pour revenir au menu pricipal taper 1, sinon taper 0"))
         if questionjeux==0:
             jeux=False
